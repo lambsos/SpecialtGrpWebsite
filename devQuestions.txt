@@ -1,0 +1,14 @@
+Things that need chosen/clarification
+	Website Title (tab title) | done
+	Default tab to choose upon arrival | Brighton Homes intro slideshow
+	Do we want the header brighton style or yours| Brighton homes logo+title
+	Agent order| dad scott mom carlie
+	Do testhimonials go by each agent or by group? | per person, selecting
+	Do you want images sliding on the Brokerage tab? If so which ones? | backround? IDX API
+	What should be present on commercial Apt. Services | Done
+	
+	What should be on Developement and Contracting Services? | Done
+	What would you like for the about us page?
+	Logo placement? (most go to the left of the title)
+	
+	
