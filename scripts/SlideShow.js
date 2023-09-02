@@ -20,7 +20,7 @@ function startSlideshow() {
   
       // Show the next slide
       slides[currentSlide].classList.add("active");
-    }, 10000); // 10 seconds
+    }, 3000); // 3 seconds
   }
   
   // Start the slideshow when the page is loaded

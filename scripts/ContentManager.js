@@ -36,7 +36,7 @@ function selectBrokerage(contentManager) {
 
         // Create the first agent element
     var agent1 = document.createElement("div");
-    agent1.className = "Broker";
+    agent1.className = "AgentBioLeft";
     agent1.id = "AgentBio1";
 
     var heading1 = document.createElement("h2");
@@ -44,7 +44,7 @@ function selectBrokerage(contentManager) {
     agent1.appendChild(heading1);
 
     var photo1 = document.createElement("div");
-    photo1.className = "BrokerPhotoWrapper";
+    photo1.className = "AgentPhotoWrapperLeft";
     agent1.appendChild(photo1);
 
     var img1 = document.createElement("img");
@@ -58,15 +58,15 @@ function selectBrokerage(contentManager) {
 
     // Create the second agent element
     var agent2 = document.createElement("div");
-    agent2.className = "AgentBioRight";
+    agent2.className = "AgentBioLeft";
     agent2.id = "AgentBio2";
 
     var heading2 = document.createElement("h2");
-    heading2.textContent = "Shel Eldredge";
+    heading2.textContent = "Shel Eldredge - Agent";
     agent2.appendChild(heading2);
 
     var photo2 = document.createElement("div");
-    photo2.className = "AgentPhotoWrapperRight";
+    photo2.className = "AgentPhotoWrapperLeft";
     agent2.appendChild(photo2);
 
     var img2 = document.createElement("img");
@@ -74,7 +74,7 @@ function selectBrokerage(contentManager) {
     photo2.appendChild(img2);
 
     var description2 = document.createElement("p");
-    description2.className = "AgentDescriptionRight";
+    description2.className = "AgentDescriptionLeft";
     description2.textContent = "Description of Shel Eldredge";
     agent2.appendChild(description2);
 
@@ -84,7 +84,7 @@ function selectBrokerage(contentManager) {
     agent3.id = "AgentBio3";
 
     var heading3 = document.createElement("h2");
-    heading3.textContent = "Scot Halladay ";
+    heading3.textContent = "Scot Halladay - Agent ";
     agent3.appendChild(heading3);
 
     var photo3 = document.createElement("div");
@@ -102,15 +102,15 @@ function selectBrokerage(contentManager) {
 
     // Create the fourth agent element
     var agent4 = document.createElement("div");
-    agent4.className = "AgentBioRight";
+    agent4.className = "AgentBioLeft";
     agent4.id = "AgentBio4";
 
     var heading4 = document.createElement("h2");
-    heading4.textContent = "Carlie Eldredge";
+    heading4.textContent = "Carlie Eldredge - Agent";
     agent4.appendChild(heading4);
 
     var photo4 = document.createElement("div");
-    photo4.className = "AgentPhotoWrapperRight";
+    photo4.className = "AgentPhotoWrapperLeft";
     agent4.appendChild(photo4);
 
     var img4 = document.createElement("img");
@@ -118,7 +118,7 @@ function selectBrokerage(contentManager) {
     photo4.appendChild(img4);
 
     var description4 = document.createElement("p");
-    description4.className = "AgentDescriptionRight";
+    description4.className = "AgentDescriptionLeft";
     description4.textContent = "Carlie Description";
     agent4.appendChild(description4);
 
@@ -260,14 +260,15 @@ function selectDevelopement(contentManager) {
         startSlideshow(slideshow);
     }
     addDevelopement("Developed and built by Specialty Group Inc, Alpine Meadows is a 32 bed assisted living facility with approximately 22,000 square feet and services the needs of the elderly in the greater boise metro area.", ['images/developement/AlpineMeadows1.png', 'images/developement/AlpineMeadows2.png'], "Alpine Meadows", contentManager);
-    addDevelopement("Imaging Center of Idaho is a specialized medical outpatient imaging facility which provides MRI, CT, X-ray, ultrasound, mammography, fluoroscopy and x-ray services to the greater Boise Metro Area.", ["images/ImagingCenterFrontLeft.JPG", "images/ImagingCenterZoomedRight.jpg"], "Imaging Center of Idaho", contentManager);
-    addDevelopement("Developed small lot subdivision for local drug testing facility in Meridian.", ["images/Placeholder.png"],  "Minert Development", contentManager );
-    addDevelopement("Project custom designed and built for attorneys practicing estate planning and business law in Eagle Idaho. ", ["images/Placeholder.png"],  "Idaho Estate Planning", contentManager );
-    addDevelopement("Medical facility run by Portneuf Medical Center in Pocatello Idaho", ["images/Placeholder.png"],  "Advanced Imaging Center of Pocatello", contentManager );
-    addDevelopement("56 lot residential subdivision developed in the south Boise area with custom homes. ", ["images/Placeholder.png"],  "Bridgeport Development", contentManager );
-    addDevelopement("4000 square foot custom designed home built in Meridian", ["images/Placeholder.png"],  "Wheeler Home", contentManager );
-    addDevelopement("3500 square foot custom designed and built home in Boise Idaho", ["images/Placeholder.png"],  "Wilcox home", contentManager );
-    addDevelopement("3800 square foot custom built home in Meridian.", ["images/Placeholder.png"],  "Pear Blossom Home", contentManager );
+    addDevelopement("Imaging Center of Idaho is a specialized medical outpatient imaging facility which provides MRI, CT, X-ray, ultrasound, mammography, fluoroscopy and x-ray services to the greater Boise Metro Area.", ["images/ImagingCenterFrontLeft.JPG"], "Imaging Center of Idaho", contentManager);
+    addDevelopement("Developed small lot subdivision for local drug testing facility in Meridian.", ["images/developement/Minert Development.png"],  "Minert Development", contentManager );
+    addDevelopement("Project custom designed and built for attorneys practicing estate planning and business law in Eagle Idaho. ", ["images/aboutUs/Idaho Estate Planning Building.png"],  "Idaho Estate Planning", contentManager );
+    addDevelopement("Medical facility run by Portneuf Medical Center in Pocatello Idaho", ["images/ImagingCenterZoomedRight.jpg"],  "Advanced Imaging Center of Pocatello", contentManager );
+    addDevelopement("56 lot residential subdivision developed in the south Boise area with custom homes. ", ["images/developement/Bridgeport Development.jpg"],  "Bridgeport Development", contentManager );
+    addDevelopement("4000 square foot custom designed home built in Meridian", ["images/developement/Wheeler Home.jpg"],  "Wheeler Home", contentManager );
+    addDevelopement("3500 square foot custom designed and built home in Boise Idaho", ["images/developement/Wilcox front 2.jpg"],  "Wilcox home", contentManager );
+    addDevelopement("3800 square foot custom built home in Meridian.", ["images/developement/Pear Blossom.jpg"],  "Pear Blossom Home", contentManager );
+    addDevelopement("rehab authority description.", ["images/developement/rehabAuthority.jpg"], "Rehab Authority", contentManager);
     
     
     return;
@@ -286,9 +287,9 @@ function selectAboutUs(contentManager) {
 
     // Array of image sources
     const imageSources = [
+    "images/aboutUs/ICI Front Elevation.jpg",
     "images/aboutUs/Wheeler Home.jpg",
     "images/aboutUs/Wilcox front 2.jpg",
-    "images/aboutUs/ICI Front Elevation.jpg",
     "images/aboutUs/Idaho Estate Planning Building.png",
     ];
 
@@ -332,7 +333,7 @@ function startSlideshow(slideshow) {
   
       // Show the next slide
       slides[currentSlide].classList.add("active");
-    }, 10000); // 10 seconds
+    }, 2500); // 10 seconds
   }
   function swapCommercialTab(contentManager, selectedTab) {
     //find the correct tab and add the corresponding content
@@ -366,7 +367,7 @@ function startSlideshow(slideshow) {
             slideshow.appendChild(image1);
             //input the correct text content TODO
             let multiFamilyDescription = document.getElementById("CommercialTabDescription");
-            multiFamilyDescription.textContent = "this is the multFamily Tab";
+            multiFamilyDescription.textContent = "this is the multiFamily Tab";
             break;
 
         case 'retail':
@@ -374,7 +375,7 @@ function startSlideshow(slideshow) {
             selectUnderline("RetailOption");
             //input the correct slide images TODO
             var image1 = document.createElement('img');
-            image1.src = 'images/commercial/retail.png';
+            image1.src = 'images/commercial/retail.jpg';
             image1.className = 'slide';
             slideshow.appendChild(image1);
             //input the correct text content TODO
