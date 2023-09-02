@@ -13,10 +13,10 @@ DevelopementSelector.addEventListener('click', () =>selectDevelopement(contentMa
 AboutUsSelector.addEventListener('click', () =>selectAboutUs(contentManager));
 
 //start with the abous us page
-selectAboutUs(contentManager);
+//selectAboutUs(contentManager);
 //selectCommercial(contentManager);
 //selectDevelopement(contentManager);
-
+swapTestimonialsTab(contentManager);
 
 //defining functions
 
@@ -307,6 +307,17 @@ function selectAboutUs(contentManager) {
     aboutUsText.textContent = " Specialty Group Inc. was started in 1995 building custom homes in the Boise metro area. In 2000 Specialty Group added brokerage, development and commercial contracting services to the company helping buyers, sellers and investors with real estate transactions. In 2019 Specialty Group started offering commercial appraisal services."; // Add your text here
     slideshow.appendChild(aboutUsText);
 
+
+    // Create and append the About Us text element
+    const testimonialsButton = document.createElement("button");
+    testimonialsButton.id = "testimonialsButton";
+    testimonialsButton.textContent = "Testimonials"; 
+    testimonialsButton.addEventListener("click", () => {
+        swapTestimonialsTab(contentManager);
+        return;
+    });
+    slideshow.appendChild(testimonialsButton);
+
     // Append the slideshow element to the slideshow container
     slideshowContainer.appendChild(slideshow);
 
@@ -412,10 +423,282 @@ function startSlideshow(slideshow) {
         default:
             break;
     }
-    startSlideshow(contentManager);
+    startSlideshow(contentManager)
 
 
   }
+
+function swapTestimonialsTab(){
+// script.js
+const testimonials = [
+    {
+        name: "Deana Lowry",
+        image: "images/placeholder.png",
+        text: "I highly recommend using Specialty Homes Inc., and Charles\
+        Eldredge as a Buyer's and Seller's Agent. Charles is very\
+        knowledgeable in both residential and investment property\
+        markets. We also really appreciate his integrity and\
+        professionalism, as we have used his services on multiple\
+        occasions.\
+        We used Charles to buy our first home and felt good about his\
+        services, so we used him to sell our home as well. We feel he\
+        helped us get the best deal for our situation and money. We have\
+        also used Charles as our realtor to buy investment properties and\
+        felt very confident in his knowledge and expertise.\
+        Not only do we recommend Charles as a reliable realtor, but we\
+        also highly recommend him for a builder as well. We have been\
+        completely thrilled with our new home built by Specialty Homes.\
+        Charles' construction experience is definitely a very important\
+        quality in his ability as a Buyer's and Seller's agent.\
+        You may call me if you need any additional information about the\
+        quality of service that Specialty Homes provides.\
+        Sincerely,\
+        Deana Lowry",
+    },
+    {
+        name: "Brandon & Stephanie Eliason", 
+        image: "images/placeholder.png",
+        text: "To Whom It May Concern:\
+        For 2 years, we have been living in our custom home which was designed and built by\
+        Specialty Homes. We found a home we liked, but could not obtain the plans. With the\
+        help of Charles Eldredge and Val Hill, we created the home in which we plan on living\
+        for the rest of our lives.\
+        Initially we were not sure about the building process, but found the suggestions and\
+        changes made by Charles and Val very much to our satisfaction. Custom changes are\
+        what have made our home unique and tailored to our own family of seven. We are\
+        extremely pleased with the final product and would recommend Specialty Homes to our\
+        friends and neighbors.\
+        After the building process completed, Val was very responsive to our questions and\
+        concerns. We never felt it was a burden to contact Val. Although we do not anticipate\
+        moving to another home, we would definitely contact Specialty homes if we chose to do\
+        so.\
+        Sincerely,\
+        Brandon & Stephanie Eliason",
+
+    },
+    {
+        name: "Bill Lish", 
+        image: "images/placeholder.png",
+        text: "I highly recommend using Specialty Realty and Charles Eldredge as a buyer’s agent.\
+        Charles is very knowledgeable in both the residential and investment property markets (I\
+        explored both before purchasing an investment property). Although this was the first\
+        property I have ever purchased, Charles was able to walk me through the process quite\
+        easily and was able to resolve all of my concerns in a timely and accurate manner.\
+        Charles also has an intimate knowledge of the Boise-area real estate market. Even\
+        though he is not an appraiser, I found that Charles was very accurate in determining the\
+        actual value of a property and helping to negotiate a price that would be advantageous to\
+        me.\
+        One of the best things is that Charles is not only a realtor, but a builder as well. This\
+        proved very useful as I looked at homes. He was willing to get a bit dirty and look for\
+        any major structural or other issues that might cause a problem down the road. I walked\
+        out of several houses based on his recommendation. This was especially helpful because\
+        I did not have to incur the expense of an inspection for a home that I wouldn’t eventually\
+        buy because of structural defects. Charles’ construction experience is definitely a very\
+        important feature of his ability as a buyer’s agent.\
+        You may call me if you need additional information about the quality of service that\
+        Specialty Realty provides. (208) 890-1867\
+        Sincerely,\
+        William Lish",
+        
+    },
+    {
+        name: "Jeff and Carla Boice", 
+        image: "images/placeholder.png",
+        text: "To Whom It May Concern:\
+        This letter will serve as a recommendation for Specialty Homes Inc. in general,\
+        and Charles Eldredge, and Val Hill, specifically with regards to the building of our\
+        custom home.\
+        Our process began with Charles, our Real Estate Agent with Specialty Homes\
+        Inc., who worked patiently with us as we attempted to design the home to our\
+        own specifications. Charles was accommodating, while at the same time offered\
+        many positive suggestions to us. We were able to design a home that met our\
+        needs while keeping within our budget.\
+        Once building started, Val, the Project Coordinator for Specialty Homes, was\
+        very efficient and determined to get the work done timely. He was very\
+        responsive to our requests and always kept us informed of the status of things.\
+        We were very pleased with the final product. We love our new home and hope to\
+        stay here for a very long time. If for any reason we ever plan on building another\
+        home, we will contact Specialty Homes.\
+        Sincerely,\
+        Jeff and Carla Boice",
+        
+    },
+    {
+        name: "Marshall and Angela Griffin", 
+        image: "images/placeholder.png",
+        text: "To Whom It May Concern:\
+        I would like to take the opportunity to remark on the\
+        professionalism, dependability and quality of craftsmanship\
+        Specialty Homes has provided for us. Specialty Homes has exceeded\
+        all expectations we had going into this project. Charles Eldredge\
+        and Val Hill have exemplified the type of professionalism that is\
+        rarely found in any business setting.\
+        Specialty Homes has been diligent in their quest for perfection,\
+        customer service, and providing some of the best quality work I\
+        have ever had the pleasure of receiving. They have always been\
+        eager and willing to help with any questions I have had.\
+        It has been a great peace of mind to know that we are in good\
+        hands with Specialty Homes. They possess such honesty, integrity,\
+        and dedication that one must see it to truly believe it.\
+        I highly recommend Specialty Homes and welcome the opportunity\
+        to further discuss their qualifications anytime.\
+        Sincerely,\
+        Marshall and Angela Griffin",
+        
+    },
+    {
+        name: "John and Shanda Lindsay", 
+        image: "images/placeholder.png",
+        text: 'Dear Charles and Val;\
+        We wanted to take a moment and thank you for helping to make our\
+        dreams come true - we live in the most beautiful home in\
+        Huckleberry Subdivision, which Specialty Homes built!\
+        From the blueprint stages to the final product, the home was every bit\
+        what we wanted. In the very beginning, Charles was patient with all\
+        the changes we had to our floor plan, and once ground breaking\
+        happened, Val gave constructive hints and helps along the way. We\
+        never heard either one of you say "no, that cannot be done." Both of\
+        you were a BIG help during the entire process.\
+        Building a home is a learning process, and given the chance we\
+        would do it again and use Specialty Homes as our builder. We love\
+        our new home and will always believe that we have the most beautiful\
+        John and Shanda Lindsay',
+        
+    },
+    {
+        name: "Eric and Deana Lowry", 
+        image: "images/placeholder.png",
+        text: "To Whom It May Concern:\
+        We highly recommend Specialty Homes Inc. including Charles\
+        Eldridge, and Val Hill to build quality homes and exercise superb\
+        customer service.\
+        Our process began with Charles, our Real Estate Agent with\
+        Specialty Homes Inc., who worked closely with us as we attempted\
+        to design the home to our own specifications. Charles was\
+        accommodating, upfront, and honest. He also offered many\
+        positive, educated suggestions. We were able to design a home that\
+        met our needs while keeping within our budget.\
+        Once building started, Val, the Project Coordinator for Specialty\
+        Homes, was very efficient and meticulous. He was determined to\
+        get the work done timely, while at the same time made sure the job\
+        was done right. He was very responsive and patient with our\
+        requests and always kept us informed of the status of things.\
+        We were very pleased with the final product. It turned out better\
+        than we imagined. We love our new home and hope to stay here for\
+        a very long time. If for any reason we ever plan on building\
+        another home, we will contact Specialty Homes.\
+        Sincerely,\
+        Eric and Deana Lowry",
+        
+    },
+    {
+        name: "Max and Christy Christensen", 
+        image: "images/placeholder.png",
+        text: "To Whom It May Concern:\
+        We would like to write this letter to recommend Specialty Homes. Our relationship with\
+        Specialty Homes began back in 1999, when we decided to buy our first house. Our income\
+        was limited, but because we run a business out of our house we needed a small acreage and\
+        an understanding neighborhood. We contacted Charles and he worked with us to determine\
+        if it was in our best interest to build or buy. We were impressed that even though Charles\
+        stood to gain more if we were to have built; he seemed to genuinely want what was best\
+        for us. We decided at the time to buy an existing home. Charles worked hard and found us\
+        a great house that met all of our needs and that was within our budget.\
+        In the beginning of 2002 we decided it was time to build. Our family and business had\
+        grown. We really wanted to make this our last move and wanted to live on a larger acreage.\
+        Charles worked with us to design our house plan. He gave suggestions for minimizing cost\
+        while helping us achieve a plan that we would be happy with long term.\
+        Charles helped us find our acreage and Val and his team went to work. Val was great. He\
+        really took charge and we were amazed with his skill in coordinating everything. Val was\
+        very accommodating when we changed our mind about a few things, and made sure we got\
+        what we wanted. Val was on site almost every day and was easy to contact. When Charles\
+        sold our existing house in only 12 days, Val worked even harder to finish construction\
+        quickly in order to minimize the time between houses. We were extremely pleased with the\
+        finished product and moved into our home in July 2002.\
+        In December 2002 our water heater blew up causing extensive damage to part of our\
+        house. This was in no way the fault of Specialty Homes, Inc. We contacted Val\
+        immediately after calling 911 because we didn&#39;t know who else to call. Val arrived at our\
+        house with a framing crew and a load of lumber before the fire department left. They\
+        stabilized the main barring wall and covered the hole in the roof before they left for the\
+        night. Val was very sympathetic and caring he made sure we had some place to go and that\
+        we were taken care of. He took charge in working with our insurance carrier. Val had us\
+        back in our house within the week and our house back to as good as new in just over a\
+        month. Our insurance company has told us several times how lucky we were to have had\
+        Specialty Homes, Inc. as our builder in that many disaster reconstructions don’t even begin\
+        rebuilding for weeks.\
+        \
+        We would highly recommend Specialty Homes, Inc. to anyone considering building or buying\
+        a house. Please feel free to contact us if you have any questions.\
+        Max and Christy Christensen",
+        
+    }
+
+];
+    function swapTestimony(textBoxWrapper, text, name){
+        const header = textBoxWrapper.querySelector("h3");
+        const textbox = textBoxWrapper.querySelector("p");
+        header.textContent = name;
+        textbox.textContent = text;
+        textBoxWrapper.style.display = "block";
+
+    }
+    clearContent(contentManager);
+    // Create a header element and set its content
+    const header = document.createElement("header");
+    const h1 = document.createElement("h1");
+    h1.textContent = "Customer Testimonials";
+    header.appendChild(h1);
+
+    // Create a section element and set its id
+    const section = document.createElement("section");
+    section.id = "testimonials";
+
+    //a textbox for holding testimonials
+    const textBoxWrapper = document.createElement("div");
+    const textBoxHeader = document.createElement("h3");
+    const textBox = document.createElement("p");
+    textBoxWrapper.classList.add("textBoxWrapper-card");
+    textBoxWrapper.appendChild(textBoxHeader);
+    textBoxWrapper.appendChild(textBox);
+    textBoxWrapper.style.display = "none";
+    
+    
+    // Append the header and section to the document's body or another desired container
+    contentManager.appendChild(header);
+    contentManager.appendChild(textBoxWrapper);
+    contentManager.appendChild(section);
+
+    const testimonialsContainer = section;
+
+    testimonials.forEach((testimonial, index) => {
+        const card = document.createElement("div");
+        card.classList.add("testimonial-card");
+
+        const image = document.createElement("img");
+        image.src = testimonial.image;
+        image.alt = testimonial.name;
+
+        const name = document.createElement("h2");
+        name.textContent = testimonial.name;
+
+        const dropdownButton = document.createElement("button");
+        dropdownButton.textContent = "Testimonial >";
+        
+        const text = document.createElement("p");
+        text.textContent = testimonial.text;
+        text.style.display = "none";
+
+        dropdownButton.addEventListener("click", () => {
+            swapTestimony(textBoxWrapper, testimonials[index].text, testimonials[index].name)
+        });
+
+        card.appendChild(image);
+        card.appendChild(name);
+        card.appendChild(dropdownButton);
+        card.appendChild(text);
+
+        testimonialsContainer.appendChild(card);
+        });
+}
 
 
 

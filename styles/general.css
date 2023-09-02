@@ -268,6 +268,17 @@ body{
     width: 80%;
     border: 1px solid black;
   }
+
+  #testimonialsButton{
+    position: relative;
+    grid-row: 3;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5); /* White color with 50% opacity */
+   
+    font-size: 40px;
+    text-decoration: underline;
+    border: 1px solid black;
+  }
   
   
   /* commercial Appraisal */
