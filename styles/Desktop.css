@@ -1,11 +1,11 @@
 /* Styles for screens with a minimum width of 1024px */
-@media (min-width: 320px) {
+@media (min-width: 1130px) {
    
     .NavBar{
         
         display: grid;
         grid-template-rows: 1fr;
-        grid-template-columns:500px 40vw;
+        grid-template-columns:500px 1fr;
         border-width: 1px 1px 10px 1px;
         border-style: solid;
         border-color: gray;
@@ -74,7 +74,7 @@
         margin: 0 auto;
         padding-left: 6px;
         padding-right: 6px;
-        
+        width: 167px;
         
         
     }
