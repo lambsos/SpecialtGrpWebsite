@@ -181,7 +181,7 @@ function selectCommercial(contentManager) {
 
     var contentText = document.createElement('p');
     contentText.id = "CommercialTabDescription";
-    contentText.textContent = 'content text';
+    contentText.textContent = '';
 
     // Append the elements to their respective parents
     slideshow.appendChild(image1);
@@ -260,15 +260,15 @@ function selectDevelopement(contentManager) {
         startSlideshow(slideshow);
     }
     addDevelopement("Developed and built by Specialty Group Inc, Alpine Meadows is a 32 bed assisted living facility with approximately 22,000 square feet and services the needs of the elderly in the greater boise metro area.", ['images/developement/AlpineMeadows1.png', 'images/developement/AlpineMeadows2.png'], "Alpine Meadows", contentManager);
-    addDevelopement("Imaging Center of Idaho is a specialized medical outpatient imaging facility which provides MRI, CT, X-ray, ultrasound, mammography, fluoroscopy and x-ray services to the greater Boise Metro Area.", ["images/ImagingCenterFrontLeft.JPG"], "Imaging Center of Idaho", contentManager);
+    addDevelopement("Imaging Center of Idaho is a specialized medical outpatient imaging facility which provides MRI, CT, X-ray, ultrasound, mammography, fluoroscopy and x-ray services to the greater Boise Metro Area.", ["images/developement/ImagingCenterEntry.jpg", "images/developement/ImagingCenterFront.jpg"], "Imaging Center of Idaho", contentManager);
     addDevelopement("Developed small lot subdivision for local drug testing facility in Meridian.", ["images/developement/Minert Development.png"],  "Minert Development", contentManager );
-    addDevelopement("Project custom designed and built for attorneys practicing estate planning and business law in Eagle Idaho. ", ["images/aboutUs/Idaho Estate Planning Building.png"],  "Idaho Estate Planning", contentManager );
+    addDevelopement("Project custom designed and built for attorneys practicing estate planning and business law in Eagle Idaho. ", ["images/aboutUs/IdahoEstatePlanning.jpg"],  "Idaho Estate Planning", contentManager );
     addDevelopement("Medical facility run by Portneuf Medical Center in Pocatello Idaho", ["images/ImagingCenterZoomedRight.jpg"],  "Advanced Imaging Center of Pocatello", contentManager );
     addDevelopement("56 lot residential subdivision developed in the south Boise area with custom homes. ", ["images/developement/Bridgeport Development.jpg"],  "Bridgeport Development", contentManager );
     addDevelopement("4000 square foot custom designed home built in Meridian", ["images/developement/Wheeler Home.jpg"],  "Wheeler Home", contentManager );
     addDevelopement("3500 square foot custom designed and built home in Boise Idaho", ["images/developement/Wilcox front 2.jpg"],  "Wilcox home", contentManager );
     addDevelopement("3800 square foot custom built home in Meridian.", ["images/developement/Pear Blossom.jpg"],  "Pear Blossom Home", contentManager );
-    addDevelopement("rehab authority description.", ["images/developement/rehabAuthority.jpg"], "Rehab Authority", contentManager);
+    addDevelopement("Physical therapy facility located in Boise, Idaho.", ["images/developement/RehabAuthBackside.jpg", "images/developement/RehabAuthorityBack2.jpg"], "Rehab Authority", contentManager);
     
     
     return;
@@ -290,7 +290,7 @@ function selectAboutUs(contentManager) {
     "images/aboutUs/ICI Front Elevation.jpg",
     "images/aboutUs/Wheeler Home.jpg",
     "images/aboutUs/Wilcox front 2.jpg",
-    "images/aboutUs/Idaho Estate Planning Building.png",
+    "images/aboutUs/IdahoEstatePlanning.jpg",
     ];
 
     // Create and append the image elements
@@ -378,7 +378,7 @@ function startSlideshow(slideshow) {
             slideshow.appendChild(image1);
             //input the correct text content TODO
             let multiFamilyDescription = document.getElementById("CommercialTabDescription");
-            multiFamilyDescription.textContent = "this is the multiFamily Tab";
+            multiFamilyDescription.textContent = "";
             break;
 
         case 'retail':
@@ -391,7 +391,7 @@ function startSlideshow(slideshow) {
             slideshow.appendChild(image1);
             //input the correct text content TODO
             let retailDescription = document.getElementById("CommercialTabDescription");
-            retailDescription.textContent = "this is the retail Tab";
+            retailDescription.textContent = "";
             break;
     
         case 'industrial':
@@ -404,7 +404,7 @@ function startSlideshow(slideshow) {
             slideshow.appendChild(image1);
             //input the correct text content TODO
             let industrialDescription = document.getElementById("CommercialTabDescription");
-            industrialDescription.textContent = "this is the industrial Tab";
+            industrialDescription.textContent = "";
             break;
 
         case 'office':
@@ -417,7 +417,7 @@ function startSlideshow(slideshow) {
             slideshow.appendChild(image1);
             //input the correct text content TODO
             let officeDescription = document.getElementById("CommercialTabDescription");
-            officeDescription.textContent = "this is the office Tab";
+            officeDescription.textContent = "";
             break;
     
         default:
