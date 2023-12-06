@@ -13,10 +13,10 @@ DevelopementSelector.addEventListener('click', () =>selectDevelopement(contentMa
 AboutUsSelector.addEventListener('click', () =>selectAboutUs(contentManager));
 
 //start with the abous us page
-//selectAboutUs(contentManager);
+selectAboutUs(contentManager);
 //selectCommercial(contentManager);
 //selectDevelopement(contentManager);
-swapTestimonialsTab(contentManager);
+//swapTestimonialsTab(contentManager);
 
 //defining functions
 
@@ -53,7 +53,14 @@ function selectBrokerage(contentManager) {
 
     var description1 = document.createElement("p");
     description1.className = "AgentDescriptionLeft";
-    description1.textContent = "Brokerage Description";
+    description1.textContent = "Charles Eldredge started his career after college in homebuilding in 1995 when he started Specialty\
+    Group Inc. and since then has included commercial contracting, real estate brokerage, land\
+    development and commercial appraisal valuation to the company resume over the years. Completed\
+    projects include medical facilities, assisted living, land development, professional office, multi-family and\
+    single family residential. Charles has a bachelor’s degree in management, a Master’s Degree in Health\
+    Administration, Idaho Real-Estate Brokers license, Contractors license and pending Certified General\
+    Appraisal license. Charles was raised in Idaho and enjoys spending time with his family including 6\
+    children and currently 3 grandchildren.";
     agent1.appendChild(description1);
 
     // Create the second agent element
@@ -70,7 +77,7 @@ function selectBrokerage(contentManager) {
     agent2.appendChild(photo2);
 
     var img2 = document.createElement("img");
-    img2.src = "images/Placeholder.png";
+    img2.src = "images/agents/shelBrokeragePhoto.jpg";
     photo2.appendChild(img2);
 
     var description2 = document.createElement("p");
@@ -114,7 +121,7 @@ function selectBrokerage(contentManager) {
     agent4.appendChild(photo4);
 
     var img4 = document.createElement("img");
-    img4.src = "images/Placeholder.png";
+    img4.src = "images/agents/carlieBrokeragePhoto.jpg";
     photo4.appendChild(img4);
 
     var description4 = document.createElement("p");
@@ -140,6 +147,10 @@ function selectCommercial(contentManager) {
     var commercialWrapper = document.createElement('div');
     commercialWrapper.id = 'CommercialWrapper';
 
+    var integraDiv = document.createElement('h2');
+    integraDiv.id = 'IntegraHeader';
+    integraDiv.textContent = 'contracted through Integra Realty Resources for commercial appraisal services';
+    
     var housingOptions = document.createElement('div');
     housingOptions.id = 'HousingOptions';
 
@@ -172,12 +183,19 @@ function selectCommercial(contentManager) {
     slideshow.id = 'slideshow';
 
     var image1 = document.createElement('img');
-    image1.src = 'images/ImagingCenterZoomedRight.jpg';
+    image1.src = 'images/commercial/Office.png';
     image1.className = 'slide';
-
     var image2 = document.createElement('img');
-    image2.src = 'images/ImagingCenterFrontLeft.JPG';
+    image2.src = 'images/commercial/Industrial.png';
     image2.className = 'slide';
+    var image3 = document.createElement('img');
+    image3.src = 'images/commercial/retail.jpg';
+    image3.className = 'slide';
+    var image4 = document.createElement('img');
+    image4.src = 'images/commercial/Multi family.jpg';
+    image4.className = 'slide';
+    slideshow.appendChild(image1, image2, image3, image4);
+    console.log("default selected")
 
     var contentText = document.createElement('p');
     contentText.id = "CommercialTabDescription";
@@ -186,6 +204,8 @@ function selectCommercial(contentManager) {
     // Append the elements to their respective parents
     slideshow.appendChild(image1);
     slideshow.appendChild(image2);
+    slideshow.appendChild(image3);
+    slideshow.appendChild(image4);
 
     slideshowContainer.appendChild(slideshow);
     commercialSlideshowSizer.appendChild(slideshowContainer);
@@ -198,6 +218,7 @@ function selectCommercial(contentManager) {
     housingOptions.appendChild(industrialOption);
     housingOptions.appendChild(officeOption);
 
+    commercialWrapper.appendChild(integraDiv)
     commercialWrapper.appendChild(housingOptions);
     commercialWrapper.appendChild(commercialTabContent);
 
@@ -304,7 +325,7 @@ function selectAboutUs(contentManager) {
     // Create and append the About Us text element
     const aboutUsText = document.createElement("strong");
     aboutUsText.id = "AboutUsText";
-    aboutUsText.textContent = " Specialty Group Inc. was started in 1995 building custom homes in the Boise metro area. In 2000 Specialty Group added brokerage, development and commercial contracting services to the company helping buyers, sellers and investors with real estate transactions. In 2019 Specialty Group started offering commercial appraisal services."; // Add your text here
+    aboutUsText.textContent = " Specialty Group Inc. was started in 1995 building custom homes in the Boise metro area. In 2000 Specialty Group added brokerage, development and commercial contracting services to the company helping buyers, sellers and investors with real estate transactions. In 2020 Specialty contracted with Integra Realty Resources to also offer commercial appraisal services."; // Add your text here
     slideshow.appendChild(aboutUsText);
 
 
@@ -317,6 +338,35 @@ function selectAboutUs(contentManager) {
         return;
     });
     slideshow.appendChild(testimonialsButton);
+
+    const projectLoginButton = document.createElement("button");
+    projectLoginButton.id = "testimonialsButton";
+    projectLoginButton.textContent = "Current Project Login"; 
+    projectLoginButton.addEventListener("click", () => {
+        console.log("selected project login");
+        return;
+    });
+    slideshow.appendChild(projectLoginButton);
+
+    const currentListingsButton = document.createElement("button");
+    currentListingsButton.id = "testimonialsButton";
+    currentListingsButton.textContent = "Current Listings"; 
+    currentListingsButton.addEventListener("click", () => {
+        console.log("selected current listings");
+        return;
+    });
+    slideshow.appendChild(currentListingsButton);
+
+    const investorRelationsButton = document.createElement("button");
+    investorRelationsButton.id = "testimonialsButton";
+    investorRelationsButton.textContent = "Investor Relations"; 
+    investorRelationsButton.addEventListener("click", () => {
+        console.log("selected invesotr relations");
+        return;
+    });
+    slideshow.appendChild(investorRelationsButton);
+
+    
 
     // Append the slideshow element to the slideshow container
     slideshowContainer.appendChild(slideshow);
@@ -353,7 +403,7 @@ function startSlideshow(slideshow) {
     //clear the photos on slides to allow new ones, and not show the old ones
     let slideshow = document.getElementById("slideshow");
     clearContent(slideshow);
-
+    console.log("in commercial tab")
     function selectUnderline(elementId){
         let headers = Array.from(document.getElementById("HousingOptions").children);
         for (const Commercialheader of headers){
@@ -421,6 +471,20 @@ function startSlideshow(slideshow) {
             break;
     
         default:
+            var image1 = document.createElement('img');
+            image1.src = 'images/commercial/Office.png';
+            image1.className = 'slide';
+            var image2 = document.createElement('img');
+            image2.src = 'images/commercial/Industrial.png';
+            image2.className = 'slide';
+            var image3 = document.createElement('img');
+            image3.src = 'images/commercial/retail.jpg';
+            image3.className = 'slide';
+            var image4 = document.createElement('img');
+            image4.src = 'images/commercial/Multi family.jpg';
+            image4.className = 'slide';
+            slideshow.appendChild(image1, image2, image3, image4);
+            console.log("default selected")
             break;
     }
     startSlideshow(contentManager)
